@@ -29,3 +29,41 @@ echo "
 Umbau Hilfe ZG 23
 
 "
+echo "Bitte wählen sie den Durchmesser aus
+
+"
+
+options="9-11,5 12-13,5  Beenden"
+select option in $options; do
+                if [ "9-11,5" = $option ]; then
+                        echo "   Bei DRM 9-11,5 bitte folgendes beachten:
+                        "
+                        echo "   Rote Rohre und 9er Lineale "
+                        echo "   15er Rohrkasten (rot)
+                        "
+                        echo "   Achtung bei SW1 -> SW1 Stempel verwenden !!"
+                        sleep 2
+                        echo "
+                        Bitte erneut auswählen"
+
+                elif [ "12-13,5" = $option ]; then
+                        echo "   Bei DRM 12-13,5 bitte folgendes beachten:
+                        "
+                        echo "   Blaue Rohre und 9er Lineale "
+                        echo "   20er Rohrkasten (blau)
+                        "
+                        echo "   Achtung bei SW1 -> SW1 Stempel verwenden !!"
+                        sleep 2
+                        echo "
+                        Bitte erneut auswählen"
+
+                elif [ "Beenden" = $option ]; then
+                        echo "
+                                                     Viel Erfolg
+
+"
+                        sleep 3
+                        clear
+                        exit
+                        fi
+done
